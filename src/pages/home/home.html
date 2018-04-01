@@ -1,14 +1,55 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      diyDevApp
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h1> Found DevApp enabled servers</h1>
+  <ion-list>
+    <ion-item *ngFor="let host of foundHosts" (click)="clickHost(host)">
+      <h2>{{host.name}}</h2>
+      <h3>{{host.ip}} {{host.port}}</h3>
+      <p>{{host.full_url}}</p>
+    </ion-item>
+
+    <ion-item *ngIf="foundHosts.length==0">
+      No enabled servers found (yet)
+    </ion-item>
+  </ion-list>
+
+  <h1>Recently used servers</h1>
+  <ion-list>
+    <ion-item *ngFor="let host of earlierHosts" (click)="clickHost(host)">
+      <h2>{{host.name}}</h2>
+      <h3>{{host.ip}} {{host.port}}</h3>
+      <p>{{host.full_url}}</p>
+    </ion-item>
+    <ion-item *ngIf="earlierHosts.length==0">
+      No recently used servers found (yet)
+    </ion-item>  
+  </ion-list>
+
+  <h1>Add your own server</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="customName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>IP</ion-label>
+      <ion-input type="text" [(ngModel)]="customIP"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Port</ion-label>
+      <ion-input type="text" [(ngModel)]="customPort"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="addServer()">Add host</button>
+  <br>
+  <button *ngIf="!isSearching" ion-button full block (click)="searchDevApps()">SEARCH</button>
 </ion-content>

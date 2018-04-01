@@ -9,6 +9,9 @@ import { HomePage } from '../pages/home/home';
 
 import { Device } from '@ionic-native/device';
 import { Vibration } from '@ionic-native/vibration';
+import { UDPService } from '../providers/udp.provider';
+
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -18,7 +21,11 @@ import { Vibration } from '@ionic-native/vibration';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,9 +33,9 @@ import { Vibration } from '@ionic-native/vibration';
     HomePage
   ],
   providers: [
-    StatusBar,Device,Vibration,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    StatusBar, Device, Vibration,
+    SplashScreen, UDPService,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
