@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from "rxjs/Rx";
 
-//import { Observable } from 'rxjs/Observable';
-//import 'rxjs/add/operator/mergeMap';
-//import 'rxjs/add/operator/map';
-
 // plugin installation needed:
 // ionic plugin add --save  cordova-plugin-chrome-apps-sockets-udp
 // https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-udp
