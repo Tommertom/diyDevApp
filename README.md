@@ -12,8 +12,8 @@ I remembers the last used servers, you can easily manually add servers yourself.
 * run `npm i`
 * change `config.xml` to change the package
 * add the platform you want to use (ios/android)
-* add some plugins you want to use more (other then the ones already included, see below)
-* and install the build on the device (or multiple devices) using e.g. `ionic cordova run android`
+* add the plugins you want to use - (the `cordova add plugin` command should suffice, btw)
+* and install the custom diyDevApp build on the device (or multiple devices) using e.g. `ionic cordova run android`
 
 If need to cordova plugins you want to use, just do the  `ionic cordova plugin add` part to add it to the diyDevApp boilerplate. And of course, in the app you are developing you need to both `ionic cordova plugin add` and the `npm install ` thing.
 
