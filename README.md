@@ -9,7 +9,7 @@ It remembers the last used servers, you can easily manually add servers yourself
 * `git clone https://github.com/Tommertom/diyDevApp.git`
 * cd diyDevApp
 * run `npm i`
-* change `config.xml` to change the package
+* change `config.xml` to change the package name (optional)
 * add the platform you want to use (ios/android)
 * add the plugins you want to use - (the `cordova add plugin` command should suffice, btw)
 * and install the custom diyDevApp build on the device (or multiple devices) using e.g. `ionic cordova run android`
@@ -29,7 +29,7 @@ Tested under Android (I don't have xcode) and Samsung Tablet.
 ## Copyright
 Copyright: see LICENSE.md
 
-## Plugin commands
+## Plugin commands and test code (work in progress)
 
 Copied from ionicframework documentation (native)
 

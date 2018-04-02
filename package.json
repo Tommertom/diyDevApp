@@ -30,6 +30,7 @@
     "@ionic/storage": "^2.1.3",
     "call-number": "^1.0.1",
     "com.darktalker.cordova.screenshot": "^0.1.6",
+    "cordova-android": "6.3.0",
     "cordova-clipboard": "^1.1.1",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-battery-status": "^2.0.1",
