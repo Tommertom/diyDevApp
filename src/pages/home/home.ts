@@ -62,7 +62,6 @@ export class HomePage {
               this.foundHostObject[foundHost['full_url']] = foundHost;
 
               //console.log('FOUND HOSTS OBJECT', this.foundHostObject);
-
               this.foundHosts = [];
               Object.keys(this.foundHostObject).map(full_url => {
                 this.foundHosts.push(this.foundHostObject[full_url]);
@@ -72,6 +71,11 @@ export class HomePage {
               //  return (host['ip'] !== foundHost['ip']) && (host['port'] !== foundHost['port'])
               // });
               //this.foundHosts.push(foundHost);
+
+              setTimeout(() => {
+                this.foundHostObject = {}
+              }, 5000);
+
             })
           }
         },
