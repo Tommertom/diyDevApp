@@ -238,6 +238,7 @@ var subscription = this.deviceOrientation.watchHeading().subscribe(
 
 // Stop watching heading change
 subscription.unsubscribe();
+```
 
 ionic cordova plugin add ionic-plugin-keyboard
 npm install --save @ionic-native/keyboard
