@@ -33,8 +33,9 @@ Copyright: see LICENSE.md
 
 Copied from ionicframework documentation (native)
 
-`npm install --save @ionic-native/android-full-screen @ionic-native/badge @ionic-native/battery-status @ionic-native/brightness @ionic-native/call-number @ionic-native/camera @ionic-native/clipboard @ionic-native/contacts @ionic-native/device-motion @ionic-native/device-orientation @ionic-native/keyboard @ionic-native/network @ionic-native/nfc @ionic-native/pedometer @ionic-native/printer  @ionic-native/screenshot @ionic-native/sms @ionic-native/social-sharing @ionic-native/status-bar
-
+```
+npm install --save @ionic-native/android-full-screen @ionic-native/badge @ionic-native/battery-status @ionic-native/brightness @ionic-native/call-number @ionic-native/camera @ionic-native/clipboard @ionic-native/contacts @ionic-native/device-motion @ionic-native/device-orientation @ionic-native/keyboard @ionic-native/network @ionic-native/nfc @ionic-native/pedometer @ionic-native/printer  @ionic-native/screenshot @ionic-native/sms @ionic-native/social-sharing @ionic-native/status-bar
+```
 
 ionic cordova plugin add cordova-plugin-fullscreen
 npm install --save @ionic-native/android-full-screen
@@ -103,6 +104,7 @@ this.brightness.setBrightness(brightnessValue);
 ionic cordova plugin add call-number
 npm install --save @ionic-native/call-number
 
+```
 import { CallNumber } from '@ionic-native/call-number';
 
 constructor(private callNumber: CallNumber) { }
@@ -113,11 +115,13 @@ constructor(private callNumber: CallNumber) { }
 this.callNumber.callNumber("18001010101", true)
   .then(res => console.log('Launched dialer!', res))
   .catch(err => console.log('Error launching dialer', err));
-  
+
+``` 
 
 ionic cordova plugin add cordova-plugin-camera
 npm install --save @ionic-native/camera
 
+```
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 constructor(private camera: Camera) { }
@@ -140,9 +144,12 @@ this.camera.getPicture(options).then((imageData) => {
  // Handle error
 });
 
+```
+
 ionic cordova plugin add cordova-clipboard
 npm install --save @ionic-native/clipboard
 
+```
 import { Clipboard } from '@ionic-native/clipboard';
 
 constructor(private clipboard: Clipboard) { }
@@ -160,10 +167,13 @@ this.clipboard.paste().then(
       alert('Error: ' + reject);
     }
   );
+```
 
 ionic cordova plugin add cordova-plugin-contacts
 npm install --save @ionic-native/contacts
 
+
+```
 import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
 
 constructor(private contacts: Contacts) { }
@@ -176,10 +186,13 @@ contact.save().then(
   () => console.log('Contact saved!', contact),
   (error: any) => console.error('Error saving contact.', error)
 );
+```
 
 ionic cordova plugin add cordova-plugin-device-motion
 npm install --save @ionic-native/device-motion
 
+
+```
 import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion';
 
 constructor(private deviceMotion: DeviceMotion) { }
@@ -200,8 +213,6 @@ var subscription = this.deviceMotion.watchAcceleration().subscribe((acceleration
 // Stop watch
 subscription.unsubscribe();
 ```
-
-Bericht: REQUEST 20518555, VALUE Woudzoom 4, 3823 CA OF FIELD ORDER.HOUSENUMBER IS TOO LONG (MAX LENGTH: 15)
 
 ionic cordova plugin add cordova-plugin-device-orientation
 npm install --save @ionic-native/device-orientation
