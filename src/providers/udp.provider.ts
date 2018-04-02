@@ -4,7 +4,8 @@ import { BehaviorSubject } from "rxjs/Rx";
 // plugin installation needed:
 // ionic plugin add --save  cordova-plugin-chrome-apps-sockets-udp
 // https://www.npmjs.com/package/cordova-plugin-chrome-apps-sockets-udp
-declare var chrome;
+
+declare var chrome:any;
 
 @Injectable()
 export class UDPService {
@@ -31,8 +32,9 @@ export class UDPService {
             return String.fromCharCode.apply(null, new Uint8Array(buf));
         };
 
-
         // only do udp stuff if there is plugin defined
+        if (typeof chrome === 'undefined') console.log('HEY!!! chrome not defined??');
+
         if (typeof chrome.sockets !== 'undefined') {
 
             // register the listeners
@@ -91,6 +93,7 @@ export class UDPService {
     }
 
     closeUDPService() {
+
         // close the socket
         if (typeof chrome.sockets !== 'undefined') chrome.sockets.udp.close(this.socketid);
 

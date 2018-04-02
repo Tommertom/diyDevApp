@@ -240,6 +240,7 @@ var subscription = this.deviceOrientation.watchHeading().subscribe(
 subscription.unsubscribe();
 ```
 
+# issues here with keyboard
 ionic cordova plugin add ionic-plugin-keyboard
 npm install --save @ionic-native/keyboard
 

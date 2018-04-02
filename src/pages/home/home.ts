@@ -15,6 +15,7 @@ export class HomePage {
 
   foundHosts: Array<Object> = [];
   earlierHosts: Array<Object> = [];
+  foundHostObject: Object = {};
 
   customName: string = "";
   customPort: string = "";
@@ -54,12 +55,23 @@ export class HomePage {
             let foundHost = JSON.parse(msgString.substring(6));
             foundHost['full_url'] = 'http://' + foundHost['ip'] + ':' + foundHost['port'] + foundHost['path'];
 
-            // a bit of awkward way of ensuring uniqueness of dev servers - had a bit of issue with full_url
+            // a bit of awkward way of ensuring uniqueness of dev servers
+            // have issue with filter function. Probably because of msgString??
             this.zone.run(() => {
-              this.foundHosts = this.foundHosts.filter(host => {
-                return (host['ip'] !== foundHost['ip']) && (host['port'] !== foundHost['port'])
-              });
-              this.foundHosts.push(foundHost);
+
+              this.foundHostObject[foundHost['full_url']] = foundHost;
+
+              //console.log('FOUND HOSTS OBJECT', this.foundHostObject);
+
+              this.foundHosts = [];
+              Object.keys(this.foundHostObject).map(full_url => {
+                this.foundHosts.push(this.foundHostObject[full_url]);
+              })
+
+              // this.foundHosts = this.foundHosts.filter(host => {
+              //  return (host['ip'] !== foundHost['ip']) && (host['port'] !== foundHost['port'])
+              // });
+              //this.foundHosts.push(foundHost);
             })
           }
         },

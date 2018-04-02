@@ -58,13 +58,14 @@
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-x-socialsharing": "^5.3.2",
     "cordova-sms-plugin": "^0.1.11",
+    "es6-promise-plugin": "^4.2.2",
     "ionic-angular": "3.9.2",
-    "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
     "phonegap-nfc": "^0.7.1",
     "rxjs": "5.5.7",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.20"
+    "zone.js": "0.8.20",
+    "mx.ferreyra.callnumber": "~0.0.2"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.8",
@@ -93,7 +94,6 @@
       "cordova-plugin-contacts": {},
       "cordova-plugin-device-motion": {},
       "cordova-plugin-device-orientation": {},
-      "ionic-plugin-keyboard": {},
       "cordova-plugin-network-information": {},
       "phonegap-nfc": {},
       "cordova-plugin-pedometer": {},

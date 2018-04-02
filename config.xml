@@ -100,7 +100,6 @@
     <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
     <plugin name="cordova-plugin-device-motion" spec="^1.2.5" />
     <plugin name="cordova-plugin-device-orientation" spec="^1.0.7" />
-    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
     <plugin name="phonegap-nfc" spec="^0.7.1" />
     <plugin name="cordova-plugin-pedometer" spec="^0.4.1" />
