@@ -27,11 +27,16 @@ The app does its magic through the following components:
 
 That is all!
 
+## Want to try a client
+Here is a test client, but maybe better to check your own project.
+
+https://github.com/Tommertom/diyDevAppClient
+
 ## WARNIG: Few plugins included and tested
 I tested this against, flashlight, device and vibration. And it works.
 
 ## Todo
-Well, ideally, there would be a nice UI like Ionic's DevApp. Do some sliding to remove selected servers. Test a bit more plugins. Remove typos.
+Well, ideally, there would be a nice UI like Ionic's DevApp. Test a bit more plugins. Remove typos.
 
 Tested under Android (I don't have xcode) and Samsung Tablet.
 
