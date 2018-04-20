@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ItemSliding } from 'ionic-angular';
 import { UDPService } from '../../providers/udp.provider';
 
 import { Storage } from '@ionic/storage';
@@ -17,9 +17,8 @@ export class HomePage {
   earlierHosts: Array<Object> = [];
   foundHostObject: Object = {};
 
+  customURI: string = "";
   customName: string = "";
-  customPort: string = "";
-  customIP: string = "";
 
   isSearching: boolean = false;
 
@@ -56,8 +55,8 @@ export class HomePage {
             foundHost['full_url'] = 'http://' + foundHost['ip'] + ':' + foundHost['port'] + foundHost['path'];
 
             // a bit of awkward way of ensuring uniqueness of dev servers
-            // have issue with filter function. Probably because of msgString??
-            this.zone.run(() => {
+            // have issue with filter function. Probably because of msgString type mismatch??
+            this.zone.run(() => { 
 
               this.foundHostObject[foundHost['full_url']] = foundHost;
 
@@ -67,13 +66,9 @@ export class HomePage {
                 this.foundHosts.push(this.foundHostObject[full_url]);
               })
 
-              // this.foundHosts = this.foundHosts.filter(host => {
-              //  return (host['ip'] !== foundHost['ip']) && (host['port'] !== foundHost['port'])
-              // });
-              //this.foundHosts.push(foundHost);
-
+              // remove the entry after 5 seconds - not a very proper way
               setTimeout(() => {
-                this.foundHostObject = {}
+                delete this.foundHostObject[foundHost['full_url']];
               }, 5000);
 
             })
@@ -88,9 +83,18 @@ export class HomePage {
   }
 
   addServer() {
-    let full_url = 'http://' + this.customIP + ':' + this.customPort + '/?devapp=true';
-    let host = { name: this.customName, full_url: full_url };
+    let host = { name: this.customName, full_url: this.customURI };
     this.clickHost(host);
+  }
+
+  deleteHost(item: Object, itemSliding: ItemSliding) {
+    itemSliding.close();
+
+    this.earlierHosts = this.earlierHosts.filter(host => {
+      return host['full_url'] != item['full_url']
+    });
+
+    this.saveEarlierHosts();
   }
 
   // BYE BYE!!!
