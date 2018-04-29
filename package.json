@@ -31,7 +31,6 @@
     "call-number": "^1.0.1",
     "com.darktalker.cordova.screenshot": "^0.1.6",
     "cordova-android": "6.3.0",
-    "cordova-clipboard": "^1.1.1",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-battery-status": "^2.0.1",
     "cordova-plugin-brightness": "^0.2.0",
@@ -46,6 +45,7 @@
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-flashlight": "^3.2.0",
     "cordova-plugin-fullscreen": "^1.2.0",
+    "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-network-information": "^2.0.1",
@@ -61,11 +61,11 @@
     "es6-promise-plugin": "^4.2.2",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "mx.ferreyra.callnumber": "~0.0.2",
     "phonegap-nfc": "^0.7.1",
     "rxjs": "5.5.7",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.20",
-    "mx.ferreyra.callnumber": "~0.0.2"
+    "zone.js": "0.8.20"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.8",
@@ -90,7 +90,6 @@
       "cordova-plugin-brightness": {},
       "mx.ferreyra.callnumber": {},
       "cordova-plugin-camera": {},
-      "cordova-clipboard": {},
       "cordova-plugin-contacts": {},
       "cordova-plugin-device-motion": {},
       "cordova-plugin-device-orientation": {},
@@ -101,7 +100,8 @@
       "com.darktalker.cordova.screenshot": {},
       "cordova-sms-plugin": {},
       "cordova-plugin-x-socialsharing": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": []
   }

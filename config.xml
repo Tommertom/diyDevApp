@@ -96,7 +96,6 @@
     <plugin name="cordova-plugin-brightness" spec="^0.2.0" />
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <plugin name="cordova-plugin-camera" spec="^4.0.2" />
-    <plugin name="cordova-clipboard" spec="^1.1.1" />
     <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
     <plugin name="cordova-plugin-device-motion" spec="^1.2.5" />
     <plugin name="cordova-plugin-device-orientation" spec="^1.0.7" />
@@ -108,4 +107,5 @@
     <plugin name="cordova-sms-plugin" spec="^0.1.11" />
     <plugin name="cordova-plugin-x-socialsharing" spec="^5.3.2" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
 </widget>
